@@ -1,0 +1,9 @@
+@import '@radix-ui/themes/styles.css';
+
+.radix-themes {
+  --cursor-button: pointer;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
