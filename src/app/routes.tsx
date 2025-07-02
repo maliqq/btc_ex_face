@@ -4,8 +4,10 @@ import {
 } from "react-router-dom";
 
 import Root from "./root";
-import ExchangeForm from "@/components/transactions/exchange_form";
-import SuccessInfo from "@/components/common/success_info";
+import NewTransaction from "@/components/transactions/new";
+import ShowTransaction from "@/components/transactions/show";
+import Home from "@/components/home";
+import Help from "@/components/help";
 
 const router = createHashRouter([
   {
@@ -13,12 +15,20 @@ const router = createHashRouter([
     element: <Root />,
     children: [
       {
-        path: "/new",
-        element: <ExchangeForm />,
+        path: "/",
+        element: <Home />,
       },
       {
-        path: "/success",
-        element: <SuccessInfo />,
+        path: "/new",
+        element: <NewTransaction />,
+      },
+      {
+        path: "/txn/:id",
+        element: <ShowTransaction />,
+      },
+      {
+        path: "/help",
+        element: <Help />,
       }
     ]
   },

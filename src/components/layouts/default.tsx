@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { useResetRecoilState } from 'recoil';
 import { new_transaction } from '@/lib/atoms';
 
-import logo from '/logo.svg';
-
 import {
   ClipboardPen, ArrowLeftRight, CircleQuestionMark, Cog,
 } from 'lucide-react';
@@ -27,9 +25,7 @@ const Component = ({ children }: { children: React.ReactNode }) => {
       <Flex className="Container">
         <Flex className="Side" p={{initial: "2", md: "4"}}>
           <Box mb={{initial: "0", md: "4"}} className="Logo">
-            <a href="/#/" style={{cursor: 'pointer'}} title="Exchange USDT&rarr;BTC" onClick={ (e) => { e.prevenDefault(); navigate('/') } }>
-              <img src={logo} />
-            </a>
+            <a href="/#/" style={{cursor: 'pointer'}} title="Exchange USDT&rarr;BTC" onClick={ (e) => { e.prevenDefault(); navigate('/') } }></a>
           </Box>
 
           <Link style={{cursor: 'pointer'}} className="NavLink" color="orange" onClick={ navigateNewTransaction }><Flex gap="1" align="center">

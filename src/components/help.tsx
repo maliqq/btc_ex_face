@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const Component = () => {
-  return <>Hello, world!</>;
+  return (
+    <>Help</>
+  );
 };
 
 export default Component;
